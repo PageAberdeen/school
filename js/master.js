@@ -10,11 +10,11 @@ var schoolDistrict = [
   {name:'柳江区',val:'5'}];
 var schoolDate =[
   [{sname:'柳东中心小学',sid:'001'},{sname:'潭中小学',sid:'002'}],
-  [{sname:'柳南小学一',sid:003},{sname:'柳南小学二',sid:'004'}],
-  [{sname:'柳北小学',sid:004}],
-  [{sname:'城中小学',sid:005}],
-  [{sname:'鱼峰小学',sid:006}],
-  [{sname:'柳江小学',sid:007}]
+  [{sname:'柳南小学一',sid:'003'},{sname:'柳南小学二',sid:'004'}],
+  [{sname:'柳北小学',sid:'004'}],
+  [{sname:'城中小学',sid:'005'}],
+  [{sname:'鱼峰小学',sid:'006'}],
+  [{sname:'柳江小学',sid:'007'}]
 ];
 var frag = '';
 var schoolFrag = '';
@@ -50,7 +50,6 @@ $('.modal').on('click','*',function(e){
       $('.modal').fadeOut(400);
       $('.modal-section').empty();
     })
-console.log(frag)
 $('header').load('data/header.php')
 $('footer').load('data/footer.php')
 $.ready(
@@ -64,3 +63,7 @@ $.ready(
       $($(this).attr('href')).addClass('active').siblings().removeClass('active');
     })
 )
+
+$('.clear-btn').on('click',function(){
+  ($('#notice').is(':checked'))&&$('.modal').fadeOut(400)
+})

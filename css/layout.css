@@ -182,6 +182,12 @@ header{
   height: 40px;
   background-color: red;
 }
+
+.indexModal{
+  display: none;
+  text-align: center;
+}
+
 .modal{
   position: fixed;
   top: 0;
@@ -189,8 +195,6 @@ header{
   bottom: 0;
   left: 0;
   z-index: 10;
-  display: none;
-  text-align: center;
   background-color:rgba(0,0,0,.63)
 }
 .modal-dialog{
@@ -201,7 +205,7 @@ header{
   left: 0;
   z-index: 10;
   margin: auto;
-  padding: 25px;
+  padding: 25px 35px;
   width: 600px;
   height: 494px;
   border-radius: 10px;
@@ -375,4 +379,134 @@ header{
 
 .findPwd-link a{
   color: #222;
+}
+
+/*信息采集页面*/
+.enterSection{
+  margin-top: 10px;
+}
+
+.notice{
+  text-align: center;
+}
+
+.notice-content{
+  margin-top: 28px;
+  margin-bottom: 20px;
+  min-height: 250px;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.check-container{
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.check-container input[type="checkbox"]{
+  margin: 0;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+
+.clear-btn{
+  display: inline-block;
+  padding: 8px 0;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.clear-btn:hover{
+  color: #fff;
+  background-color: #1b6d85;
+}
+
+.msgTip{
+  text-align: center;
+}
+
+.addMsg{
+  padding: 10px 30px;
+  width: 1000px;
+  margin: 10px auto;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.addMsg li{
+  width: 50%;
+  float: left;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.addMsg li:last-child{
+  margin-bottom: 0;
+}
+
+.addMsg li label{
+  display: inline-block;
+  width: 30%;
+  text-align: right;
+}
+
+.addMsg li input ,
+.msg-select
+{
+  padding-left: 6px;
+  width: 170px;
+  height: 24px;
+  border: 1px solid #efefef;
+  border-radius: 3px;
+  outline: none;
+}
+.msg-select{
+  /*将默认的select选择框样式清除*/
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  background: url(../images/more_unfold.png) no-repeat right;
+}
+
+.tip-danger{
+  color: #e4393b;
+}
+
+.entering-submit{
+  width: 50%;
+  height: 36px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  letter-spacing: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.entering-submit:hover{
+  color: #fff;
+  background-color: #1b6d85;
+}
+
+.btn-box{
+  text-align: center;
+}
+
+/*预约时间*/
+.appointment{
+  position: absolute;
+  top:0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin:auto;
+  width: 1000px;
+  height:430px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
 }
