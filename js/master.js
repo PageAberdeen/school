@@ -22,7 +22,7 @@ function createDistrict(){
   return function(){
     frag = '';
     schoolFrag = '';
-    for(var i = 0 ; i< schoolDistrict.length ; i++){
+    for(var i = 0 ; i< schoolDistrict.length ; i++){//生成区县名称DOM节点
       frag += "<li class='modal-section-list' val='"+schoolDistrict[i].val+"'>"+schoolDistrict[i].name+"</li>";
     }
   }
@@ -31,16 +31,20 @@ function createDistrict(){
 var cDistrict = new createDistrict();
 $('.modal').on('click','*',function(e){
   e.stopPropagation();
-  if(this==$('.close-tier')[0]){
+  if(this==$('.close-tier')[0]){ //点击遮罩层其他处关闭遮罩层
     $('.modal').fadeOut(300);
     $('.modal-section').empty();
   };
   if($(this)[0].tagName=="LI"){
     var index = parseInt($(this).attr('val'));
-    if(!isNaN(index)){
+    if(!isNaN(index)){  //学校使用的是sid所以index都为NAN
       for( var j = 0 ; j < schoolDate[index].length; j++){
         schoolFrag +='<li class="modal-section-list" sid="'+schoolDate[index][j].sid+'">'+schoolDate[index][j].sname+'</li>';
       }
+    }else{
+      var str =encodeURI($(this).text())
+      console.log(str)
+      window.location.href='login.html?'+str+''
     }
     $('.modal-section').empty();
     $('.modal-section').append(schoolFrag);
@@ -52,11 +56,16 @@ $('.modal').on('click','*',function(e){
     })
 $('header').load('data/header.php')
 $('footer').load('data/footer.php')
+
 $.ready(
+    
     $('.js-show-schoolList').on('click',function(){
       $('.modal').fadeIn(400)
       cDistrict()
       $('.modal-section').append(frag);
+      $(document).on('touchmove',function (e){
+        e.preventDefault();
+      });
     }),
     $('.js-tab').on('click','a',function(){
       $(this).addClass('active').siblings().removeClass('active');

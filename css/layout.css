@@ -17,6 +17,7 @@ header{
   width:40px;
   height: 40px;
   margin: 10px 0;
+  vertical-align: middle;
   line-height: 40px;
   text-align: center;
   border-radius: 50%;
@@ -180,7 +181,14 @@ header{
   bottom: 0;
   width: 100%;
   height: 40px;
-  background-color: red;
+  background-color: rgba(0,0,0,.6);
+}
+
+.footer-title{
+  color: #fff;
+  font-size: 14px;
+  line-height: 40px;
+  text-align: center;
 }
 
 .indexModal{
@@ -326,7 +334,7 @@ header{
   position: absolute;
   left: 88px;
   bottom: 0;
-  margin: 0 8px;
+  margin: -1px 8px;
   width: 48px;
   height: 2px;
   background: #1db0b8;
@@ -479,8 +487,9 @@ header{
 }
 
 .entering-submit{
-  width: 50%;
+  width: 80%;
   height: 36px;
+  line-height: 34px;
   border: 1px solid #ddd;
   border-radius: 4px;
   letter-spacing: 4px;
@@ -494,6 +503,8 @@ header{
 }
 
 .btn-box{
+  margin: 0 auto;
+  width: 1000px;
   text-align: center;
 }
 
@@ -509,4 +520,291 @@ header{
   height:430px;
   border: 1px solid #ddd;
   border-radius: 8px;
+  overflow: hidden;
 }
+
+.appointment-form{
+  position: relative;
+}
+
+.appointment-left{
+  float: left;
+  padding: 10px;
+  width: 35%;
+  height: 100%;
+  background-color: #00b7ee;
+}
+
+.appointment-left-radius{
+  margin: 0 auto;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.appointment-left-text{
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+.appointment-left-text h4{
+  text-align: center;
+}
+
+.appointment-right{
+  float: right;
+  padding: 20px;
+  width: 65%;
+  height: 100%;
+}
+
+.appointment-right-tip{
+  margin-bottom: 10px;
+}
+
+.appointment-submit{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -100px;
+  width: 200px;
+  height: 30px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.appointment-submit:hover{
+  color: #fff;
+  background-color: #1b6d85;
+}
+
+.date-tab{
+  font-size: 0;
+}
+
+.date-tab a{
+  padding: 8px 40px;
+  font-size: 16px;
+  color: #222;
+  border: 1px solid #ddd;
+  border-bottom: 0;
+  background-color: #fff;
+}
+
+.date-tab a:first-child{
+  border-top-left-radius: 8px;
+  border-right: 0;
+}
+
+.date-tab a:last-child{
+  border-top-right-radius: 8px;
+  border-left: 0;
+}
+
+.date-tab a.active{
+  margin-bottom: -1px;
+  height: 39px;
+  background-color: #efefef;
+}
+
+.time-box{
+  padding: 10px;
+  height: 320px;
+  border: 1px solid #ddd;
+}
+
+.time-box>li{
+  display: none;
+  height: 100%;
+}
+
+.time-box>li label{
+  cursor: pointer;
+}
+
+
+.time-box>li.active{
+  display: block;
+}
+
+.time-menu li{
+  float: left;
+  margin: 10px 0;
+  width: 50%;
+}
+
+.time-title{
+  margin-bottom: 10px;
+}
+
+/*录取结果反馈页面*/
+
+.result{
+  position: absolute;
+  top:0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin:auto;
+  padding: 20px;
+  width: 60%;
+  height: 160px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+
+
+.error-prompt,
+.loading-prompt,
+.success-prompt
+{
+  float: left;
+  margin-right: 10px;
+  vertical-align:middle;
+  width: 64px;
+  height: 64px;
+}
+
+.error-prompt{
+  background: url(../images/error.svg);
+}
+
+.loading-prompt{
+  background: url(../images/loading.svg);
+}
+
+.success-prompt{
+  background:url(../images/success.svg);
+}
+
+@media screen and (max-width: 375px) {
+  body{
+    height: auto;
+    overflow: auto;
+  }
+  header{
+    width:100%;
+  }
+
+  .logo{
+    vertical-align: middle;
+  }
+
+  .title{
+    font-size: 14px;
+  }
+
+  .content{
+    width: 100%;
+  }
+
+  .link-box{
+    display: none;
+  }
+
+  .entrySection{
+    padding: 20px;
+  }
+
+  .entry-list{
+    width: 100%;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    box-shadow:8px 8px 10px #dedede;
+    -webkit-transition:none;
+  }
+  .entry-list:hover{
+    box-shadow:8px 8px 10px #dedede;
+  }
+
+  .entry-btn{
+    margin-top: -4px;
+    height: 45px;
+    line-height: 45px;
+  }
+
+  .news{
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  .news-msg{
+    width: 100%;
+  }
+
+  .news-img{
+    float: left;
+    width: 100%;
+    display: none;
+  }
+
+  .modal-dialog{
+    width: 90%;
+  }
+
+  .modal-header-search{
+    font-size: 14px;
+  }
+  .modal-header{
+    padding-bottom: 1px;
+  }
+
+  .modal-section-list{
+    width: 100%;
+  }
+}
+
+@media screen and (min-width:375px) and (max-width: 750px)  {
+  body{
+    height: auto;
+    overflow: auto;
+  }
+  header{
+    width:100%;
+  }
+
+  .title{
+    font-size: 18px;
+  }
+
+  .content{
+    width: 100%;
+  }
+
+  .link-box{
+    display: none;
+  }
+
+  .entrySection{
+    padding: 20px;
+  }
+
+  .entry-list{
+    width: 100%;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+
+  .news{
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  .news-msg{
+    width: 100%;
+  }
+
+  .news-img{
+    float: left;
+    width: 100%;
+    display: none;
+  }
+}
+
