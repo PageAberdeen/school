@@ -1,0 +1,252 @@
+@media screen and (max-width: 375px) {
+    body{
+        height: auto;
+    }
+    header{
+        width:100%;
+    }
+    .footer{
+        position: relative;
+    }
+
+    .logo{
+        vertical-align: middle;
+    }
+
+    .title{
+        font-size: 14px;
+    }
+
+    .content{
+        width: 100%;
+    }
+
+    .link-box{
+    }
+    .link-login{
+        display: none;
+    }
+    .link-menu{
+        width: 34px;
+        height: 60px;
+        background: url(../images/menu.svg) no-repeat 0 20px;
+        background-size: 20px;
+    }
+
+    .entrySection{
+        padding: 20px;
+    }
+
+    .entry-pdf{
+        margin: 10px 0 0 0;
+    }
+
+    .entry-list{
+        width: 100%;
+        margin: 0;
+        margin-bottom: 20px;
+        padding: 0;
+        box-shadow:8px 8px 10px #dedede;
+        -webkit-transition:none;
+    }
+    .entry-list:hover{
+        box-shadow:8px 8px 10px #dedede;
+    }
+
+    .entry-btn{
+        margin-top: 0;
+        height: 45px;
+        line-height: 45px;
+    }
+
+    .entry-img, .entry-video{
+        height: 36px;
+        line-height: 34px;
+    }
+
+    .timeAxis{
+        display: block;
+    }
+    .timeAxis-item{
+        position: relative;
+        margin-top: 5px;
+        padding: 16px 0 14px 30px;
+        box-shadow: 0px 0px 10px 4px #dedede;
+    }
+
+    .timeAxis-item dt{
+        font-weight: bold;
+    }
+    .timeAxis-item-tip{
+        position: absolute;
+        left: -14px;
+        top: 14px;
+        width: 24px;
+        height: 24px;
+        text-align: center;
+        color: #fff;
+        border-radius: 50%;
+    }
+
+    .timeAxis-blue{
+        border-top-right-radius:5px ;
+        border-left: 3px solid #0272B9;
+    }
+
+    .timeAxis-blue .timeAxis-item-tip{
+        background-color: #0272b9;
+    }
+
+    .timeAxis-lightBlue{
+        border-left: 3px solid #3FBDD0;
+    }
+
+    .timeAxis-lightBlue .timeAxis-item-tip{
+        background-color: #3FBDD0;
+    }
+
+    .timeAxis-green{
+        border-left: 3px solid #84C927;
+    }
+
+    .timeAxis-green .timeAxis-item-tip{
+        background-color: #84C927;
+    }
+
+    .timeAxis-pink{
+        border-left: 3px solid #ED728E;
+    }
+
+    .timeAxis-pink .timeAxis-item-tip{
+        background-color: #ED728E;
+    }
+
+    .timeAxis-orange{
+        border-bottom-right-radius: 5px;
+        border-left: 3px solid #F36014;
+    }
+
+    .timeAxis-orange .timeAxis-item-tip{
+        background-color: #F36014;
+    }
+    .news{
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    .news-msg{
+        width: 100%;
+    }
+
+    .news-img{
+        float: left;
+        width: 100%;
+        display: none;
+    }
+
+    .modal-dialog{
+        width: 90%;
+    }
+
+    .modal-header-search{
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+
+
+
+    .modal-header{
+        padding-bottom: 1px;
+    }
+
+    .modal-section-list{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:375px) and (max-width: 750px)  {
+    body{
+        height: auto;
+        overflow: auto;
+    }
+    header{
+        width:100%;
+    }
+    .footer{
+        position: relative;
+    }
+    .logo{
+        vertical-align: middle;
+    }
+
+    .title{
+        font-size: 14px;
+    }
+
+    .content{
+        width: 100%;
+    }
+
+    .link-box{
+    }
+    .link-login{
+        display: none;
+    }
+
+    .entrySection{
+        padding: 20px;
+    }
+
+    .entry-list{
+        width: 100%;
+        margin: 0;
+        margin-bottom: 20px;
+        padding: 0;
+        box-shadow:8px 8px 10px #dedede;
+        -webkit-transition:none;
+    }
+    .entry-list:hover{
+        box-shadow:8px 8px 10px #dedede;
+    }
+
+    .entry-btn{
+        margin-top: 0;
+        height: 45px;
+        line-height: 45px;
+    }
+    .timeAxis{
+        display: block;
+    }
+
+    .news{
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    .news-msg{
+        width: 100%;
+    }
+
+    .news-img{
+        float: left;
+        width: 100%;
+        display: none;
+    }
+
+    .modal-dialog{
+        width: 90%;
+    }
+
+    .modal-header-search{
+        font-size: 16px;
+        line-height: 36px;
+    }
+    .modal-header{
+        padding-bottom: 1px;
+    }
+
+    .modal-section-list{
+        width: 100%;
+    }
+}

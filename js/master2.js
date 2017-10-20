@@ -1,4 +1,7 @@
 /**
+ * Created by Administrator on 2017/10/19.
+ */
+/**
  * Created by zhaoyige on 2017/9/26.
  */
 var schoolDistrict = [
@@ -22,6 +25,21 @@ var allSchool = {
 
 var frag = '';
 var schoolFrag = '';
+//创建DOM节点函数
+function createDom(obj){
+
+}
+//清除DOM节点元素
+function clear(obj){
+  frag = '';
+  schoolFrag = '';
+}
+//追加DOM节点函数
+
+function appendDom(obj){
+  $(obj).append(frag);
+}
+
 function createDistrict(){
   return function(){
     frag = '';
@@ -33,62 +51,40 @@ function createDistrict(){
 }
 
 var cDistrict = new createDistrict();
-  $('.modal').on('click','*',function(e){
-    e.stopPropagation();
-    if(this==$('.close-tier')[0]){ //点击遮罩层其他处关闭遮罩层
-      $('.modal').fadeOut(300);
-      $('.modal-section').empty();
-      $('.js-autoSearch').val('');
-      CloseMask();
-    };
-    if($(this)[0].tagName=="LI"){
-      var index = parseInt($(this).attr('val'));
-      if(!isNaN(index)){  //学校使用的是sid所以index都为NAN
-        for( var j = 0 ; j < schoolDate[index].length; j++){
-          schoolFrag +='<li class="modal-section-list" sid="'+schoolDate[index][j].sid+'">'+schoolDate[index][j].sname+'</li>';
-        }
-      }else{
-        var str =encodeURI($(this).text())
-        console.log(str)
-        window.location.href='login.html?'+str+''
+$('.modal').on('click','*',function(e){
+  e.stopPropagation();
+  if(this==$('.close-tier')[0]){ //点击遮罩层其他处关闭遮罩层
+    $('.modal').fadeOut(300);
+    $('.modal-section').empty();
+  };
+  if($(this)[0].tagName=="LI"){
+    var index = parseInt($(this).attr('val'));
+    if(!isNaN(index)){  //学校使用的是sid所以index都为NAN
+      for( var j = 0 ; j < schoolDate[index].length; j++){
+        schoolFrag +='<li class="modal-section-list" sid="'+schoolDate[index][j].sid+'">'+schoolDate[index][j].sname+'</li>';
       }
-      $('.modal-section').empty();
-      $('.modal-section').append(schoolFrag);
+    }else{
+      var str =encodeURI($(this).text())
+      console.log(str)
+      window.location.href='login.html?'+str+''
     }
-  }),
+    $('.modal-section').empty();
+    $('.modal-section').append(schoolFrag);
+  }
+}),
     $('.clear-modal').on('click',function(){
       $('.modal').fadeOut(400);
       $('.modal-section').empty();
-      $('.js-autoSearch').val('');
-      CloseMask();
     })
 $('header').load('data/header.php')
 $('footer').load('data/footer.php')
 
-var handler = function () {
-  event.preventDefault();
-  event.stopPropagation();
-};
-
-var OpenMask = function()
-    {
-      document.body.addEventListener('touchmove',handler,false);
-      document.body.addEventListener('wheel',handler,false);
-};
-
-var CloseMask = function()
-{
-  document.body.removeEventListener('touchmove',handler,false);
-  document.body.removeEventListener('wheel',handler,false);
-};
-
 $.ready(
     
     $('.js-show-schoolList').on('click',function(){
-      $('.modal').fadeIn(400);
-      cDistrict();
-      $('.modal-section').append(frag)
-      OpenMask();
+      $('.modal').fadeIn(400)
+      cDistrict()
+      $('.modal-section').append(frag);
     }),
     $('.js-tab').on('click','a',function(){
       $(this).addClass('active').siblings().removeClass('active');
@@ -99,24 +95,20 @@ $.ready(
     }),
     $('.js-autoSearch').on('input propertychange',function () {
       var kw = jQuery.trim($(this).val())
-      if(kw==''){
-        $('.modal-section').empty();
-        cDistrict()
-        $('.modal-section').append(frag);
-      }
       if (/^[\u4e00-\u9fa5]+$/i.test(kw)) {
         console.log('kw:'+kw)
         var html = "";
         for(key in allSchool){
           console.log(key);
           if (key.indexOf(kw) >= 0) {
-            $('.modal-section').empty();
             html += '<li class="modal-section-list" sid="'+allSchool[key]+'">'+key+'</li>'
           }
         }
-        
+        $('.modal-section').empty();
         $('.modal-section').append(html);
-        
+      }else if(kw==''){
+        $('.modal-section').empty();
+        $('.modal-section').append(schoolFrag);
       }
     })
 )

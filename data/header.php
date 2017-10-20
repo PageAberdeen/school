@@ -8,5 +8,6 @@
   </h1>
   <ul class="link-box fr">
     <li class="link-login"><a href="login.html">登录</a></li>
+    <li class="link-menu"></li>
   </ul>
 </div>
