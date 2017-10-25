@@ -1,12 +1,9 @@
 @media screen and (max-width: 375px) {
-    body{
-        height: auto;
-    }
     header{
         width:100%;
     }
     .footer{
-        position: relative;
+        position: fixed;
     }
 
     .logo{
@@ -19,6 +16,14 @@
 
     .content{
         width: 100%;
+    }
+
+    .btn{
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        letter-spacing: 4px;
+        background-color: #fff;
+        cursor: pointer;
     }
 
     .link-box{
@@ -163,6 +168,132 @@
     .modal-section-list{
         width: 100%;
     }
+
+
+    /*信息采集页面*/
+    .form-box{
+        padding: 10px;
+        width: 100%;
+    }
+    .msgTip{
+        width:100%
+    }
+    .form-msg-item{
+        float: left;
+        display: none;
+        width: 100%;
+    }
+
+    .form-msg-item.active{
+        display: block;
+    }
+
+    .addMsg{
+        float: left;
+        width: 100%;
+        padding:10px 10px;
+    }
+
+    .addMsg label{
+        vertical-align: middle;
+    }
+
+    .addMsg li input,
+    .addMsg select{
+        width: 64%;
+        height:30px;
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+
+    .entering-next-btn,
+    .entering-previous-btn
+    {
+        display: none;
+        float:left;
+        width: 50%;
+        height: 36px;
+        line-height: 34px;
+    }
+    /*js控制下方按钮*/
+    .entering-next-btn.active{
+        display: block;
+        width: 100%;
+    }
+
+    .entering-next-btn.tactive,
+    .entering-previous-btn.tactive{
+        display: block;
+    }
+
+    .entering-submit.tactive{
+        display: block;
+        float: left;
+        width: 50%;
+    }
+
+    .addMsg li{
+        width: 100%;
+    }
+
+    .btn-box{
+        overflow: auto;
+        margin: 0;
+        width: 100%;
+    }
+
+    .enterSection{
+        overflow: hidden;
+        margin: 10px 0 50px 0;
+    }
+
+    .entering-modal{
+        padding: 10px;
+        min-height: 460px;
+        height:80%;
+    }
+    .notice-content{
+        overflow: auto;
+        margin: 10px 0;
+        height: 72%;
+    }
+
+    .entering-submit{
+        display: none;
+    }
+
+    /*预约时间*/
+    .appointment{
+        width: 100%;
+        height:auto;
+        position:static;
+    }
+    .appointment-left{
+        width: 100%;
+    }
+    .appointment-right{
+        width: 100%;
+        margin-bottom:60px;
+    }
+    .date-tab a{
+        padding: 8px 17px;
+    }
+    .time-menu li{
+        width: 100%;
+    }
+    .time-box{
+        height: auto;
+    }
+    .appointment-submit{
+        bottom: -34px;
+    }
+
+    .result{
+        width: 90%;
+        height: 200px;
+    }
+
 }
 
 @media screen and (min-width:375px) and (max-width: 750px)  {
@@ -172,6 +303,7 @@
     }
     header{
         width:100%;
+        z-index: 9;
     }
     .footer{
         position: relative;

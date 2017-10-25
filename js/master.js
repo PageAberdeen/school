@@ -116,7 +116,8 @@ $.ready(
         }
         
         $('.modal-section').append(html);
-        
+        //获取form-msg-box子元素class状态
+       
       }
     })
 )
