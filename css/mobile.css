@@ -1,9 +1,9 @@
-@media screen and (max-width: 375px) {
+@media screen and (min-width:320px) and (max-width: 750px) {
+    html,body{-webkit-text-size-adjust: 100%;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
     header{
         width:100%;
     }
-    .footer{
-        position: fixed;
+    .footer {
     }
 
     .logo{
@@ -11,7 +11,7 @@
     }
 
     .title{
-        font-size: 14px;
+        font-size: 18px;
     }
 
     .content{
@@ -66,7 +66,7 @@
 
     .entry-img, .entry-video{
         height: 36px;
-        line-height: 34px;
+        line-height: 28px;
     }
 
     .timeAxis{
@@ -155,7 +155,7 @@
 
     .modal-header-search{
         font-size: 16px;
-        line-height: 22px;
+        line-height: 24px;
     }
 
 
@@ -245,7 +245,7 @@
 
     .enterSection{
         overflow: hidden;
-        margin: 10px 0 50px 0;
+        margin: 10px 0;
     }
 
     .entering-modal{
@@ -294,9 +294,22 @@
         height: 200px;
     }
 
+    /*新闻版块*/
+    .news-container{
+        width:100%;
+    }
+    .news-title{
+        font-size: 16px;
+    }
 }
 
-@media screen and (min-width:375px) and (max-width: 750px)  {
+@media screen and (max-width: 375px){
+    .title{
+        font-size: 14px;
+    }
+}
+
+/*@media screen and (min-width:375px) and (max-width: 750px)  {
     body{
         height: auto;
         overflow: auto;

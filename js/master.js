@@ -90,6 +90,12 @@ $.ready(
       $('.modal-section').append(frag)
       OpenMask();
     }),
+    $('header').on('click','li',function(){
+      if($(this).attr('class')=='link-menu js-link-menu'){
+        $('.mobil-search').slideToggle(500);
+      }
+     
+    }),
     $('.js-tab').on('click','a',function(){
       $(this).addClass('active').siblings().removeClass('active');
       $($(this).attr('href')).addClass('active').siblings().removeClass('active');
